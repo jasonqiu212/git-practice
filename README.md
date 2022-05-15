@@ -14,7 +14,7 @@ Follow along the set up guide and tasks to hone your Git skills!
 Background: Congrats, you made a start up! Your product is an amazing text file that contains some humorous jokes. Follow along to expand your start up.
 
 1. To continue working on what you have started, clone this repository onto your machine.
-2. Edit `Change.txt` by adding a joke and commit it to your local repository. Push your changes to the remote repository on GitHub.
+2. Edit `Change.txt` by adding a joke and commit it to your local repository. Eg:
 
 ```
 Hello world!
@@ -23,18 +23,97 @@ Add your jokes below:
 1. Why do all the numbers avoid talking to pi at a party? Cos he goes on forever!!
 ```
 
-You now recruit a team of jokesters to expand your text file and you all agree to deploy the `main` branch online to the world! You wish to add another joke now.
+3. Push your changes to the remote repository on GitHub.
 
-> Be careful when adding new changes now! You should **not** directly push and commit to the `main` branch, since the changes may break your deployment.
+> Note: Nice! The above steps simulate coding on your own and pushing your own code onto GitHub. Since you are the only one adding features and making changes, there's not much need to branch and etc. The advantage of using Git when coding alone is that you can keep track of your past commits and push them easily to GitHub.
 
-3. To add another joke, create a new feature branch in your local repository and commit your new joke.
-4. Push the new branch onto the remote repository.
-5. Create a pull request to merge the your feature branch into the `main` branch.
+You now recruit a team of jokesters to expand your text file and you all agree to deploy the `main` branch in the remote repository! You wish to add another joke now.
+
+> Be careful! To make changes, you should **not** directly commit to the `main` branch, since the changes may break your deployment.
+
+4. To add another joke, create a new feature branch in your local repository and commit your new joke.
+5. Push the new branch onto the remote repository.
+6. Create a pull request to merge the your feature branch into the `main` branch.
+
+> Note: Steps 4-6 are known as the branch workflow. This workflow is common when working in teams, since it ensures that everyone's changes are on their seperate branches and do not interfere with the `main` branch.
+
+> Making changes through a PR allows others (usually your manager) to review your code and adds an extra layer of checks. After your manager approves the PR, your branch will be merged into the `main` branch.
 
 Life happens and you stop coding for 100 years. The `main` branch in the remote repository has been edited many times by others.
 
-6. Update your local repository.
+7. Update your local repository.
+
+> Note: Updating your local repository frequently is important when working in a team, since you want your local repo to be as updated as possible.
+
+Congrats! Using this efficient workflow, your start up goes down as the funniest company ever!
 
 ## Walkthrough
 
-1. Clone this repository onto your machine.
+1. To continue working on what you have started, clone this repository onto your machine.
+
+```
+# On your terminal, navigate to the directory of your choice.
+
+git clone git@github.com:jasonqiu212/git-practice.git
+
+# You should now see the repository in the directory.
+```
+
+2. Edit `Change.txt` by adding a joke and commit it to your local repository.
+
+```
+# Edit the file.
+
+git add .
+git commit -m "add a pi joke"
+```
+
+3. Push your changes to the remote repository on GitHub.
+
+```
+git push
+
+# You can now view your commit on the GitHub repository.
+```
+
+4. To add another joke, create a new feature branch in your local repository and commit your new joke.
+
+```
+# To create a new branch and navigate to the new branch.
+git branch jason/new-joke
+git checkout jason/new-joke
+
+# Alternatively:
+git checkout -b jason/new-joke
+
+# Edit the file and commit the change.
+git add .
+git commit -m "add a new joke"
+
+# To see the effect of branching:
+git checkout main
+
+# View the file that you edited. The changes are gone! That's because you made the changes in the new branch. The main branch is not touched.
+
+git checkout jason/new-joke
+```
+
+5. Push the new branch onto the remote repository.
+
+```
+git push origin jason/new-joke
+
+# You can now view your new branch on GitHub! Notice that the file differs when you switch branches on GitHub.
+```
+
+6. Create a pull request to merge the your feature branch into the `main` branch.
+
+```
+# You can do this on GitHub.
+```
+
+7. Update your local repository.
+
+```
+git pull
+```
