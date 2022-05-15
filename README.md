@@ -57,6 +57,9 @@ Congrats! Using this efficient workflow, your start up goes down as the funniest
 git clone git@github.com:jasonqiu212/git-practice.git
 
 # You should now see the repository in the directory.
+
+# Navigate into the repository
+cd git-practice
 ```
 
 2. Edit `Change.txt` by adding a joke and commit it to your local repository.
