@@ -93,7 +93,9 @@ git commit -m "add a new joke"
 # To see the effect of branching:
 git checkout main
 
-# View the file that you edited. The changes are gone! That's because you made the changes in the new branch. The main branch is not touched.
+# View the file that you edited. The changes are gone!
+# That's because you made the changes in the new branch.
+# The main branch is not touched.
 
 git checkout jason/new-joke
 ```
@@ -103,7 +105,8 @@ git checkout jason/new-joke
 ```
 git push origin jason/new-joke
 
-# You can now view your new branch on GitHub! Notice that the file differs when you switch branches on GitHub.
+# You can now view your new branch on GitHub!
+# Notice that the file differs when you switch branches on GitHub.
 ```
 
 6. Create a pull request to merge the your feature branch into the `main` branch.
