@@ -51,6 +51,8 @@ Congrats! Using this efficient workflow, your start up goes down as the funniest
 
 1. To continue working on what you have started, clone this repository onto your machine.
 
+![](./src/Clone.png)
+
 ```
 # On your terminal, navigate to the directory of your choice.
 
@@ -115,7 +117,13 @@ git push origin jason/new-joke
 # Notice that the file differs when you switch branches on GitHub.
 ```
 
+![](./src/Branch.png)
+
 6. Create a pull request to merge the your feature branch into the `main` branch.
+
+![](./src/Create%20Pull%20Request.png)
+
+![](./src/Pull%20Request.png)
 
 7. Update your local repository.
 
