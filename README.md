@@ -39,11 +39,9 @@ You now recruit a team of jokesters to expand your text file and you all agree t
 
 > Making changes through a PR allows others (usually your manager) to review your code and adds an extra layer of checks. After your manager approves the PR, your branch will be merged into the `main` branch.
 
-7. Assume your branch has been merged, delete the feature branch on your local repository.
-
 Life happens and you stop coding for 100 years. The `main` branch in the remote repository has been edited many times by others.
 
-8. Update your local repository.
+7. Update your local repository.
 
 > Note: Updating your local repository frequently is important when working in a team, since you want your local repo to be as updated as possible.
 
@@ -119,19 +117,11 @@ git push origin jason/new-joke
 
 6. Create a pull request to merge the your feature branch into the `main` branch.
 
-7. Assume your branch has been merged, delete the feature branch on your local repository.
+7. Update your local repository.
 
 ```
 git checkout main
-git branch -d jason/new-joke
 
-# Check your current branches
-git branch
-```
-
-8. Update your local repository.
-
-```
 git pull
 
 # By default, git pull will pull from 'origin main'
