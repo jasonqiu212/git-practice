@@ -1,10 +1,11 @@
 # Git and GitHub Practice using Command Line
 
-Follow along the set up guide and tasks to hone your Git skills!
+- Follow along the set up guide and tasks to hone your Git skills!
+- [Link to relevant slides](https://docs.google.com/presentation/d/1ylQlAuG2y9Vmi-1KwP_64ganPIFmO-ijBaNw8bxCcnc/edit?usp=sharing)
 
 ## Set up
 
-1. Install Git on your machine. (Git should already be installed on Mac and Linux. For Windows users, check out this [guide](https://www.atlassian.com/git/tutorials/install-git#windows).)
+1. Install Git on your machine (Git should already be installed on Mac and Linux. For Windows users, check out this [guide](https://www.atlassian.com/git/tutorials/install-git#windows).).
 2. Verify your Git installation: Open Terminal and type `git --version`.
 3. Check if your machine has a SSH key using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) and set up new SSH key if needed.
 4. Add your SSH key to GitHub using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
@@ -13,7 +14,7 @@ Follow along the set up guide and tasks to hone your Git skills!
 
 Background: Congrats, you made a start up! Your product is an amazing text file that contains some humorous jokes. Follow along to expand your start up.
 
-1. To continue working on what you have started, clone this repository onto your machine.
+1. To continue working on what you have started, clone this repository onto your machine via SSH.
 2. Edit `Change.txt` by adding a joke and commit it to your local repository. Eg:
 
 ```
@@ -29,11 +30,11 @@ Add your jokes below:
 
 You now recruit a team of jokesters to expand your text file and you all agree to deploy the `main` branch in the remote repository! You wish to add another joke now.
 
-> Be careful! To make changes, you should **not** directly commit to the `main` branch, since the changes may break your deployment.
+> **Be careful!** Unlike before, to make changes now, you should **not** directly commit to the `main` branch, since the changes may break your deployment.
 
 4. To add another joke, create a new feature branch in your local repository and commit your new joke.
 5. Push the new branch onto the remote repository.
-6. Create a pull request to merge the your feature branch into the `main` branch.
+6. Create a pull request to merge your feature branch into the `main` branch.
 
 > Note: Steps 4-6 are known as the branch workflow. This workflow is common when working in teams, since it ensures that everyone's changes are on their seperate branches and do not interfere with the `main` branch.
 
@@ -49,7 +50,7 @@ Congrats! Using this efficient workflow, your start up goes down as the funniest
 
 ## Walkthrough
 
-1. To continue working on what you have started, clone this repository onto your machine.
+1. To continue working on what you have started, clone this repository onto your machine via SSH.
 
 ![](./src/Clone.png)
 
@@ -78,7 +79,7 @@ git commit -m "add a pi joke"
 ```
 git push
 
-# You can now view your commit on the GitHub repository.
+# You can now view your commit on this GitHub repository.
 ```
 
 4. To add another joke, create a new feature branch in your local repository and commit your new joke.
@@ -96,6 +97,8 @@ git add .
 git commit -m "add a new joke"
 
 # To see the effect of branching:
+
+# Switch back to the main branch.
 git checkout main
 
 # View the file that you edited. The changes are gone!
@@ -110,7 +113,7 @@ git checkout jason/new-joke
 ```
 git push origin jason/new-joke
 
-# origin -> The remote repository you are pushing to. Already set up when you cloned.
+# origin -> Alias for remote repository you are pushing to. Already set up when you cloned.
 # jason/new-joke -> The branch you are pushing to
 
 # You can now view your new branch on GitHub!
@@ -119,7 +122,7 @@ git push origin jason/new-joke
 
 ![](./src/Branch.png)
 
-6. Create a pull request to merge the your feature branch into the `main` branch.
+6. Create a pull request to merge your feature branch into the `main` branch.
 
 ![](./src/Create%20Pull%20Request.png)
 
