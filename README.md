@@ -8,6 +8,7 @@
 2. Verify your Git installation: Open Terminal and type `git --version`.
 3. Check if your machine has a SSH key using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) and set up new SSH key if needed.
 4. Add your SSH key to GitHub using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+5. Accept invitation to be a collaborator of this repository. If you do not, you will not be able to push to this repo.
 
 ## Practice Tasks
 
