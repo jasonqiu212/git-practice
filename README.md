@@ -1,25 +1,22 @@
 # Git and GitHub Practice using Command Line
 
-- Follow along the set up guide and tasks to hone your Git skills!
 - [Link to relevant slides](https://docs.google.com/presentation/d/1ylQlAuG2y9Vmi-1KwP_64ganPIFmO-ijBaNw8bxCcnc/edit?usp=sharing)
 
-## Set up
+## Set up for Git on Command Line
 
 1. Install Git on your machine (Git should already be installed on Mac and Linux. For Windows users, check out this [guide](https://www.atlassian.com/git/tutorials/install-git#windows).).
 2. Verify your Git installation: Open Terminal and type `git --version`.
 3. Check if your machine has a SSH key using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) and set up new SSH key if needed.
-4. Add your SSH key to GitHub using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+4. Add your SSH key to GitHub using this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
-## Tasks
+## Practice Tasks
 
-Background: Congrats, you made a start up! Your product is an amazing text file that contains some humorous jokes. Follow along to expand your start up.
+Background: Congrats, you made a start up! Your product is an amazing text file that contains some humorous jokes.
 
 1. To continue working on what you have started, clone this repository onto your machine via SSH.
 2. Edit `Change.txt` by adding a joke and commit it to your local repository. Eg:
 
 ```
-Hello world!
-
 Add your jokes below:
 1. Why do all the numbers avoid talking to pi at a party? Cos he goes on forever!!
 ```
@@ -30,9 +27,9 @@ Add your jokes below:
 
 You now recruit a team of jokesters to expand your text file and you all agree to deploy the `main` branch in the remote repository! You wish to add another joke now.
 
-> **Be careful!** Unlike before, to make changes now, you should **not** directly commit to the `main` branch, since the changes may break your deployment.
+> **Be careful!** Unlike before, to make changes now, you should **not** directly commit to the `main` branch, since the changes may break your deployment. Usually, when working in a team, the main branch will be protected to prevent any unwanted pushes.
 
-4. To add another joke, create a new feature branch in your local repository and commit your new joke.
+4. To add another joke, create a new feature branch in your local repository and commit your new joke in the new branch.
 5. Push the new branch onto the remote repository.
 6. Create a pull request to merge your feature branch into the `main` branch.
 
@@ -79,17 +76,19 @@ git commit -m "add a pi joke"
 ```
 git push
 
+# By default, git push will push to 'origin main'
+
 # You can now view your commit on this GitHub repository.
 ```
 
-4. To add another joke, create a new feature branch in your local repository and commit your new joke.
+4. To add another joke, create a new feature branch in your local repository and commit your new joke in the new branch.
 
 ```
 # To create a new branch and navigate to the new branch.
 git branch jason/new-joke
 git checkout jason/new-joke
 
-# Alternatively:
+# Alternatively, in 1 line.
 git checkout -b jason/new-joke
 
 # Edit the file and commit the change.
